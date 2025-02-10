@@ -14,7 +14,7 @@ import (
 	"github.com/go-chi/chi/v5"
 )
 
-const webDir = "./web/" // директория с файлами
+//const webDir = "./web/" // директория с файлами
 
 func main() {
 
@@ -39,7 +39,10 @@ func main() {
 
 	// Обработчики URL
 	//
-	http.Handle("/", http.FileServer(http.Dir(webDir)))
+
+	const webDir = "./web"
+	fs := http.FileServer(http.Dir(webDir))
+	r.Mount("/", fs) // добавляем обработку для статических файлов
 
 	r.Get("/api/nextdate", httpH.NextDateH)    // Формирование новой даты
 	r.Post("/api/task", httpH.AddTasksH)       // Добавление задач
