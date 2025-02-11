@@ -4,7 +4,6 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
-	"fmt"
 	udt "go_final_project/myLib/UDT"
 	dbA "go_final_project/myLib/dataBase"
 	genDate "go_final_project/myLib/dateGen"
@@ -311,10 +310,6 @@ func GetTasksH(w http.ResponseWriter, r *http.Request) {
 
 // Сохранение данных задачи по его ID
 func SaveTasksH(w http.ResponseWriter, r *http.Request) {
-
-	fmt.Println()
-	fmt.Println("=============================================================")
-	fmt.Println("Принят PUT запрос") //=========================================
 
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 
