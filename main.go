@@ -12,36 +12,39 @@ import (
 	httpH "go_final_project/myLib/httpH"
 
 	"github.com/go-chi/chi/v5"
+	"github.com/joho/godotenv"
 )
 
-//const webDir = "./web/" // директория с файлами
-
 func main() {
+
+	// Загрузка переменных окружения
+	//
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal(err)
+		os.Exit(1)
+	}
 
 	// Подключение БД - Создание БД
 	// Отключение от БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
+		log.Fatal(err)
+		os.Exit(1)
+	}
+	defer func() {
+		err = sqlDB.Close()
+		if err != nil {
+			log.Fatal(err)
 		}
-		log.Fatal(err)
-		os.Exit(1)
-	}
-	err = sqlDB.Close()
-	if err != nil {
-		log.Fatal(err)
-		os.Exit(1)
-	}
-
-	r := chi.NewRouter()
+	}()
 
 	// Обработчики URL
 	//
+	r := chi.NewRouter()
 
-	const webDir = "./web"
-	fs := http.FileServer(http.Dir(webDir))
+	fs := http.FileServer(http.Dir(os.Getenv("HTTP_WEB")))
 	r.Mount("/", fs) // добавляем обработку для статических файлов
 
 	r.Get("/api/nextdate", httpH.NextDateH)    // Формирование новой даты

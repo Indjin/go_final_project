@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
+	"fmt"
 	udt "go_final_project/myLib/UDT"
 	dbA "go_final_project/myLib/dataBase"
 	genDate "go_final_project/myLib/dateGen"
@@ -115,11 +116,8 @@ func AddTasksH(w http.ResponseWriter, r *http.Request) {
 
 	// Подключение к БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
-		}
 		log.Fatal(err)
 		os.Exit(1)
 	}
@@ -178,11 +176,8 @@ func ReadTasksH(w http.ResponseWriter, r *http.Request) {
 
 	// Подключение к БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
-		}
 		log.Fatal(err)
 		os.Exit(1)
 	}
@@ -267,11 +262,8 @@ func GetTasksH(w http.ResponseWriter, r *http.Request) {
 
 	// Подключение к БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
-		}
 		log.Fatal(err)
 		os.Exit(1)
 	}
@@ -320,6 +312,10 @@ func GetTasksH(w http.ResponseWriter, r *http.Request) {
 // Сохранение данных задачи по его ID
 func SaveTasksH(w http.ResponseWriter, r *http.Request) {
 
+	fmt.Println()
+	fmt.Println("=============================================================")
+	fmt.Println("Принят PUT запрос") //=========================================
+
 	w.Header().Set("Content-Type", "application/json; charset=UTF-8")
 
 	// Подготовка аварийного сообщения в случае ошибки обработчика
@@ -334,6 +330,7 @@ func SaveTasksH(w http.ResponseWriter, r *http.Request) {
 	//
 	bodyReq, err := io.ReadAll(r.Body)
 	if err != nil {
+
 		http.Error(w, `"Bad Request"`, http.StatusBadRequest)
 		return
 	}
@@ -372,11 +369,8 @@ func SaveTasksH(w http.ResponseWriter, r *http.Request) {
 
 	// Подключение к БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
-		}
 		log.Fatal(err)
 		os.Exit(1)
 	}
@@ -431,11 +425,8 @@ func DoneTasksH(w http.ResponseWriter, r *http.Request) {
 
 	// Подключение к БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
-		}
 		log.Fatal(err)
 		os.Exit(1)
 	}
@@ -535,11 +526,8 @@ func DelTasksH(w http.ResponseWriter, r *http.Request) {
 
 	// Подключение к БД
 	//
-	sqlDB, dbCl, err := dbA.CheckCreateDB()
+	sqlDB, err := dbA.CheckCreateDB()
 	if err != nil {
-		if dbCl != nil {
-			dbCl()
-		}
 		log.Fatal(err)
 		os.Exit(1)
 	}
@@ -629,5 +617,5 @@ func qualDate(date, repeat string) (string, error) {
 
 	}
 
-	return dateNew, errors.New("Ошибка")
+	return dateNew, nil
 }

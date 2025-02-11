@@ -5,23 +5,15 @@ import (
 	"fmt"
 	"os"
 	"path/filepath"
-
-	"github.com/joho/godotenv"
 )
 
-func CheckCreateDB() (*sql.DB, func(), error) {
-
-	// Загрузка переменных окружения
-	err := godotenv.Load()
-	if err != nil {
-		return nil, nil, err
-	}
+func CheckCreateDB() (*sql.DB, error) {
 
 	// Определение расположения исполняемого файла
 	// Проверка присутствия файла БД
 	appPath, err := os.Executable()
 	if err != nil {
-		return nil, nil, err
+		return nil, err
 	}
 
 	dbFile := filepath.Join(filepath.Dir(appPath), os.Getenv("DB_NAME"))
@@ -36,12 +28,12 @@ func CheckCreateDB() (*sql.DB, func(), error) {
 	// если БД нет, она создаётся и пингуется
 	db, err := sql.Open(os.Getenv("DB_DRIVER"), os.Getenv("DB_NAME"))
 	if err != nil {
-		return nil, func() { _ = db.Close() }, err
+		return nil, err
 	}
 
 	err = db.Ping()
 	if err != nil {
-		return nil, func() { _ = db.Close() }, err
+		return nil, err
 	}
 
 	if install {
@@ -59,13 +51,13 @@ func CheckCreateDB() (*sql.DB, func(), error) {
 		stmt, err := db.Prepare(str)
 
 		if err != nil {
-			return nil, func() { _ = db.Close() }, err
+			return nil, err
 		}
 		defer func() { _ = stmt.Close() }()
 
 		_, err = stmt.Exec()
 		if err != nil {
-			return nil, func() { _ = db.Close() }, err
+			return nil, err
 		}
 
 		fmt.Println("Таблица создана.")
@@ -74,11 +66,11 @@ func CheckCreateDB() (*sql.DB, func(), error) {
 
 		_, err = db.Exec(str)
 		if err != nil {
-			return nil, func() { _ = db.Close() }, err
+			return nil, err
 		}
 
 		fmt.Println("Индекс создан.")
 	}
 
-	return db, nil, nil // возврат указателя на созданную БД
+	return db, nil // возврат указателя на БД
 }
