@@ -1,5 +1,12 @@
 package udt
 
+import (
+	"database/sql"
+	"log"
+
+	_ "modernc.org/sqlite"
+)
+
 // Запрос
 type RxFormat struct {
 	Date    string `json:"date"`             // дата задачи в формате 20060102;
@@ -37,4 +44,13 @@ type TxFormatEl struct {
 
 type TxFormat struct {
 	Tasks []TxFormatEl `json:"tasks"` // слайс выборки данных БД
+}
+
+// Указатели на БД и логеры
+type PtrLib struct {
+	PointerDB   *sql.DB     // указатель на БД
+	PointerLogI *log.Logger // Указатель на логер общей информации
+	PointerLogW *log.Logger // Указатель на логер предупреждений
+	PointerLogE *log.Logger // Указатель на логер ошибок
+
 }

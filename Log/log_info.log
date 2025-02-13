@@ -1,0 +1,126 @@
+INFO:	2025/02/13 21:02:39 main.go:77: starting the server on port: 7540
+INFO:	2025/02/13 21:02:47 httpH.go:697: delete request accepted to delete the task by id
+INFO:	2025/02/13 21:02:47 httpH.go:761: request - Ok
+INFO:	2025/02/13 21:02:47 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:02:47 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:02:57 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:02:57 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:03:05 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:03:05 httpH.go:191: was added to the database < Date: 20250213, Title: AAAA, Comment: ssss, Repeat:  >
+INFO:	2025/02/13 21:03:05 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:03:05 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:03:05 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:03:14 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:03:14 httpH.go:191: was added to the database < Date: 20250213, Title: BBB, Comment: bbbb, Repeat:  >
+INFO:	2025/02/13 21:03:14 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:03:14 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:03:14 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:03:20 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:03:20 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:03:20 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:03:20 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:07 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:05:07 httpH.go:191: was added to the database < Date: 20250304, Title: BBBBB, Comment: fdfdfd, Repeat: d 4 >
+INFO:	2025/02/13 21:05:07 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:05:07 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:07 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:16 httpH.go:314: get request accepted to read the task by id
+INFO:	2025/02/13 21:05:16 httpH.go:398: request - Ok
+INFO:	2025/02/13 21:05:20 httpH.go:406: put request accepted to save the task by id
+INFO:	2025/02/13 21:05:20 httpH.go:524: request - Ok
+INFO:	2025/02/13 21:05:20 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:20 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:25 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:05:25 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:05:25 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:25 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:26 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:05:26 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:05:26 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:26 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:26 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:05:27 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:05:27 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:27 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:27 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:05:27 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:05:27 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:27 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:05:28 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:05:28 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:05:28 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:05:28 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:14:10 main.go:77: starting the server on port: 7540
+INFO:	2025/02/13 21:15:31 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:15:31 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:15:43 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:15:43 httpH.go:191: was added to the database < Date: 20250213, Title: JJJJJ, Comment: h, Repeat:  >
+INFO:	2025/02/13 21:15:43 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:15:43 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:15:43 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:15:48 httpH.go:697: delete request accepted to delete the task by id
+INFO:	2025/02/13 21:15:48 httpH.go:761: request - Ok
+INFO:	2025/02/13 21:15:48 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:15:48 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:39 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:19:39 httpH.go:191: was added to the database < Date: 20250220, Title: JJJJJdd, Comment: , Repeat: d 4 >
+INFO:	2025/02/13 21:19:39 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:19:39 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:39 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:47 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:47 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:47 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:47 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:47 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:47 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:47 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:47 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:48 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:48 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:48 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:48 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:49 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:49 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:49 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:49 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:50 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:50 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:50 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:50 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:51 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:51 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:51 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:51 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:52 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:52 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:52 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:52 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:54 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:54 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:54 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:54 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:19:55 httpH.go:533: post request accepted to done the task by id
+INFO:	2025/02/13 21:19:55 httpH.go:688: request - Ok
+INFO:	2025/02/13 21:19:55 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:19:55 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:20:03 httpH.go:697: delete request accepted to delete the task by id
+INFO:	2025/02/13 21:20:03 httpH.go:761: request - Ok
+INFO:	2025/02/13 21:20:03 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:20:03 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:24:14 dbAction.go:68: the table has been created
+INFO:	2025/02/13 21:24:14 dbAction.go:77: the index has been created
+INFO:	2025/02/13 21:24:14 main.go:77: starting the server on port: 7540
+INFO:	2025/02/13 21:24:22 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:24:22 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:24:31 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:24:31 httpH.go:191: was added to the database < Date: 20250213, Title: AAA, Comment: aaaa, Repeat:  >
+INFO:	2025/02/13 21:24:31 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:24:31 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:24:31 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:24:39 httpH.go:60: post request accepted to add task
+INFO:	2025/02/13 21:24:39 httpH.go:191: was added to the database < Date: 20250213, Title: BBB, Comment: bbb, Repeat:  >
+INFO:	2025/02/13 21:24:39 httpH.go:205: request - Ok
+INFO:	2025/02/13 21:24:39 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:24:39 httpH.go:306: request - Ok
+INFO:	2025/02/13 21:24:42 httpH.go:213: get request accepted to read tasks all
+INFO:	2025/02/13 21:24:42 httpH.go:306: request - Ok
