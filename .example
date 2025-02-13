@@ -1,0 +1,6 @@
+DB_DRIVER=sqlite
+DB_NAME=scheduler.db
+DB_TABLE_NAME=scheduler
+HTTP_PORT=7540
+HTTP_WEB=./web
+LOG_LOCATION=./Log/
